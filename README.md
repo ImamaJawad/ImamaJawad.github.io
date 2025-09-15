@@ -7,10 +7,5 @@ This repository contains the source code for my personal portfolio website.
 ## About
 Data Scientist & Applied AI Engineer specializing in production ML systems and Graph Neural Networks.
 
-## Tech Stack
-- Pure HTML/CSS/JavaScript
-- Responsive design
-- GitHub Pages hosting
-
 ---
 *For my project repositories and technical work, visit my [main GitHub profile](https://github.com/ImamaJawad).*
