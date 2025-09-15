@@ -1,1 +1,562 @@
-"Hello World"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imama Jawad - Data Scientist & AI Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #667eea;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .achievements li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .achievements li:before {
+            content: "▶";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-top: 3px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-top: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: #764ba2;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .cta-section h3 {
+            color: white;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="hero">
+                <h1>Imama Jawad</h1>
+                <h2>Data Scientist & Applied AI Engineer</h2>
+                <div class="contact-info">
+                    <a href="mailto:imama.muhammad@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        imama.muhammad@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/imamajawad/" class="contact-item" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <span class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Belfast, UK
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        +44 7887 228093
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h3>Professional Summary</h3>
+            <div class="summary">
+                Experienced Data Scientist and Applied AI Engineer with <span class="highlight">4+ years</span> delivering production ML systems 
+                generating <span class="highlight">$75k+ monthly revenue impact</span>. Proven expertise in remote collaboration across global 
+                teams and translating complex AI solutions into business value for Fortune 500 clients. Skilled 
+                in end-to-end ML pipelines (Python, R, Docker) with advanced expertise in NLP, Computer Vision, 
+                and Graph Neural Networks. Strong communicator experienced in stakeholder presentations and 
+                cross-functional team leadership across distributed environments.
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section">
+            <h3>Professional Experience</h3>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Cyber-AI Research Intern</div>
+                        <div class="company">CSIT, Belfast</div>
+                    </div>
+                    <div class="date">February 2025 - June 2025</div>
+                </div>
+                <ul class="achievements">
+                    <li>Developed and optimized Graph Neural Network architectures within the Nvidia Morpheus pipeline</li>
+                    <li>Created simpler, more efficient GNN-based IDS architectures while maintaining comparable accuracy</li>
+                    <li>Explored self-supervised learning approaches for cybersecurity applications</li>
+                    <li><strong>Key Skills:</strong> Graph Neural Networks (GNNs), PyTorch Geometric, Network Intrusion Detection, Cybersecurity Analytics</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Senior Data Scientist</div>
+                        <div class="company">Afiniti, Islamabad</div>
+                    </div>
+                    <div class="date">July 2020 - February 2025</div>
+                </div>
+                <ul class="achievements">
+                    <li>Built and maintained AI models for call center optimization, delivering <strong>$75k incremental revenue monthly</strong></li>
+                    <li>Led comprehensive feature engineering and production monitoring across global client base</li>
+                    <li>Automated manual production monitoring, implementing alerts and runtime monitoring systems</li>
+                    <li>Managed AI Production team operations for high-profile clients including <strong>Caesars, O2, Altice, and ESA</strong></li>
+                    <li>Led team of 2 resources and trained 9 new hires in Applied AI department</li>
+                    <li><strong>Remote Collaboration:</strong> Managed distributed teams across US, Europe, and Middle East time zones</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h3>Education</h3>
+            <div class="education-item">
+                <div>
+                    <div class="job-title">MSc in Artificial Intelligence</div>
+                    <div class="company">Queen's University Belfast</div>
+                    <div style="color: #666; margin-top: 0.5rem;">Modules: Machine Learning, Knowledge Engineering, Computer Vision, NLP, AI for Health</div>
+                </div>
+                <div class="date">September 2025</div>
+            </div>
+            <div class="education-item">
+                <div>
+                    <div class="job-title">Bachelor of Software Engineering</div>
+                    <div class="company">National University of Sciences and Technology</div>
+                    <div style="color: #666; margin-top: 0.5rem;">First-Class Honors - CGPA: 3.57</div>
+                </div>
+                <div class="date">July 2020</div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">C/C++/C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">R (dplyr, ggplot2)</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-brain"></i> Machine Learning & AI</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">Graph Neural Networks</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">BERT/GPT</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-database"></i> Databases & Cloud</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Oracle PL/SQL</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MLOps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section">
+            <h3>Featured Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title"><i class="fas fa-chart-line"></i> Production Call Center AI Optimization</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">MLOps</span>
+                    </div>
+                    <p>Deployed supervised learning models generating <strong>$75k monthly incremental revenue</strong>. Implemented automated monitoring and alerting systems reducing manual oversight by 80%.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title"><i class="fas fa-shield-alt"></i> Graph Neural Networks for Cybersecurity</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch Geometric</span>
+                        <span class="tech-tag">NVIDIA Morpheus</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">GNNs</span>
+                    </div>
+                    <p>Developed lightweight GNN architectures for network intrusion detection. Achieved comparable accuracy to complex models while reducing computational overhead.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title"><i class="fas fa-language"></i> NLP & Large Language Models</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Hugging Face</span>
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">GPT</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                    <p>Fine-tuned transformer-based NLP models for text classification and question answering. Built knowledge graphs using OWL for structured reasoning tasks.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title"><i class="fas fa-eye"></i> Computer Vision & GANs</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">CNNs</span>
+                        <span class="tech-tag">GANs</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                    <p>Implemented object detection and segmentation models. Applied GANs for synthetic image generation in domain adaptation tasks.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title"><i class="fas fa-heartbeat"></i> AI for Health & Medical Imaging</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Medical Imaging</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Precision Medicine</span>
+                    </div>
+                    <p>Designed ML models for diagnostic support using medical imaging datasets. Applied precision medicine approaches for personalized healthcare solutions.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title"><i class="fas fa-mobile-alt"></i> RSSI-based Object Detection</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <p>Implemented Android Object Detection and Localization Algorithm using distortion in RSSI values. Full-stack mobile application development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h3>Let's Build Something Amazing Together</h3>
+            <p>I'm passionate about creating AI solutions that drive real business impact. Whether you're looking for a data scientist to join your remote team or want to discuss exciting AI projects, I'd love to connect!</p>
+            <div class="cta-buttons">
+                <a href="mailto:imama.muhammad@gmail.com" class="btn">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+                <a href="https://www.linkedin.com/in/imamajawad/" class="btn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    Connect on LinkedIn
+                </a>
+                <a href="https://github.com/ImamaJawad" class="btn" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View My Code
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
