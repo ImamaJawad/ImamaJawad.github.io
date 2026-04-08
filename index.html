@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imama Jawad - AI Engineer & Data Scientist</title>
+    <title>Imama Jawad - Senior AI Engineer & Data Scientist</title>
     <meta name="description" content="Senior AI Engineer with 5+ years building production-grade AI systems. Expert in LangChain, LLMs, RAG systems, and agentic AI frameworks. $900K+ revenue impact.">
     <meta name="keywords" content="AI Engineer, Machine Learning, LangChain, LLM, RAG, Agentic AI, Data Scientist, PyTorch, TensorFlow">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,11 +15,25 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #2ecc71;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --text: #2c3e50;
+            --text-light: #555;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            line-height: 1.7;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             min-height: 100vh;
         }
 
@@ -28,624 +43,876 @@
             padding: 0 20px;
         }
 
-        .header {
+        /* Navigation */
+        nav {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            padding: 3rem 2rem;
-            margin: 2rem 0;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
         .hero {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 32px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
+            line-height: 1.1;
         }
 
         .hero h2 {
-            font-size: 1.8rem;
-            color: #555;
+            font-size: 2rem;
+            color: var(--text-light);
             font-weight: 400;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.4;
         }
 
         .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem 0;
         }
 
         .stat {
             text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 16px;
+            transition: transform 0.3s;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
         }
 
         .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
             font-size: 0.9rem;
-            color: #666;
+            color: var(--text-light);
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #555;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-        }
-
-        .contact-item:hover {
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            transform: translateY(-2px);
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            margin: 2rem 0;
-            padding: 2.5rem;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .section h3 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.8rem;
-            display: inline-block;
-        }
-
-        .summary {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: #444;
-        }
-
-        .highlight {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            letter-spacing: 1.5px;
             font-weight: 600;
-            margin: 0.2rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            border-left: 5px solid #667eea;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            height: 150px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border-radius: 0 0 0 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-            border-left-width: 8px;
-        }
-
-        .project-featured {
-            border-left-color: #2ecc71;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), rgba(102, 126, 234, 0.05));
-        }
-
-        .project-featured .featured-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #2ecc71;
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            z-index: 1;
-        }
-
-        .project-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .project-description {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 1.2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tech-tag {
-            background: #f0f0f0;
-            color: #667eea;
-            padding: 0.3rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
-        }
-
-        .project-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.7rem 1.2rem;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-btn:hover {
-            background: #5a6fd8;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 1.8rem;
-            border-radius: 16px;
-            border-top: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-category h4 {
-            color: #2c3e50;
-            margin-bottom: 1.2rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .cta-section {
-            text-align: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 4rem 2rem;
-            border-radius: 24px;
-            margin: 2rem 0 3rem 0;
-        }
-
-        .cta-section h3 {
-            color: white;
-            border: none;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-            opacity: 0.95;
         }
 
         .cta-buttons {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2rem;
-            border: 2px solid white;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
-            color: white;
             text-decoration: none;
             font-weight: 700;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.8rem;
-            font-size: 1.05rem;
         }
 
-        .btn:hover {
-            background: white;
-            color: #667eea;
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
         }
 
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            margin: 3rem 0;
+            padding: 4rem 3rem;
+            border-radius: 32px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-top: 1.5rem;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 2;
+            color: var(--text);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
+        }
+
+        .project-featured {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(102, 126, 234, 0.08));
+            border: 2px solid var(--accent);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-category h4 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .education-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .education-degree {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-school {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .education-date {
+            color: var(--text-light);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .education-details {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+
+        .education-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #27ae60);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 5rem 3rem;
+            border-radius: 32px;
+            margin: 3rem 0;
+        }
+
+        .contact-section h3 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .contact-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .contact-item-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 16px;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .contact-item-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .hero h2 {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid,
+            .skills-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
             }
 
             .hero-stats {
-                gap: 1.5rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section h3 {
-                font-size: 1.8rem;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Imama Jawad</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="hero">
-                <h1>Imama Jawad</h1>
-                <h2>Senior AI Engineer & Applied AI Specialist</h2>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">$900K+</div>
-                        <div class="stat-label">Annual Revenue Impact</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">5+ Years</div>
-                        <div class="stat-label">AI/ML Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">99.5%</div>
-                        <div class="stat-label">Production Uptime</div>
-                    </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Senior AI Engineer<br>& Data Scientist</h1>
+            <h2>Building Production-Grade AI Systems That Deliver Real Business Impact</h2>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">$900K+</span>
+                    <span class="stat-label">Annual Revenue Impact</span>
                 </div>
-                <div class="contact-info">
-                    <a href="mailto:imama.muhammad@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/imamajawad/" class="contact-item" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/ImamaJawad" class="contact-item" target="_blank">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                    <span class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Abu Dhabi, UAE
-                    </span>
+                <div class="stat">
+                    <span class="stat-number">5+ Years</span>
+                    <span class="stat-label">AI/ML Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">99.5%</span>
+                    <span class="stat-label">Production Uptime</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Fortune 500</span>
+                    <span class="stat-label">Client Experience</span>
                 </div>
             </div>
-        </header>
 
-        <!-- Professional Summary -->
-        <section class="section">
-            <h3>About Me</h3>
-            <div class="summary">
-                Senior AI Engineer with <span class="highlight">5+ years</span> building production-grade AI systems and autonomous agent architectures. 
-                Proven track record delivering <span class="highlight">$900K+ annual revenue</span> through AI automation and intelligent decision-making systems. 
-                Expert in <span class="highlight">LangChain, LlamaIndex, and modern agentic AI frameworks</span> with strong foundation in MLOps, 
-                cloud deployment, and enterprise API integration.
-                <br><br>
-                <strong>Specializations:</strong>
-                <div style="margin-top: 1rem;">
-                    <span class="badge">LLM-Powered Applications</span>
-                    <span class="badge">Multi-Agent Systems</span>
-                    <span class="badge">RAG Architectures</span>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+                <a href="https://github.com/ImamaJawad" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-header">
+                <h3 class="section-title">About Me</h3>
+                <p class="section-subtitle">Turning Complex AI Challenges into Production-Ready Solutions</p>
+            </div>
+            
+            <div class="about-content">
+                <p>
+                    Senior AI Engineer with <span class="highlight">5+ years</span> building production-grade AI systems and autonomous agent architectures. 
+                    Proven track record delivering <span class="highlight">$900K+ annual revenue</span> through AI automation and intelligent decision-making systems 
+                    for Fortune 500 clients including Caesars, O2, Altice, and ESA.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Expert in <span class="highlight">LangChain, LlamaIndex, and modern agentic AI frameworks</span> with strong foundation in MLOps, 
+                    cloud deployment (AWS, Azure), and enterprise API integration. Recent MSc in AI from Queen's University Belfast (Distinction) 
+                    with cutting-edge research in Graph Neural Networks for cybersecurity.
+                </p>
+                
+                <div class="badge-container">
+                    <span class="badge">Agentic AI</span>
+                    <span class="badge">LLM Applications</span>
                     <span class="badge">Voice AI</span>
+                    <span class="badge">RAG Systems</span>
                     <span class="badge">Graph Neural Networks</span>
                     <span class="badge">Production MLOps</span>
-                    <span class="badge">AWS/Azure</span>
+                    <span class="badge">Team Leadership</span>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Projects -->
-        <section class="section">
-            <h3>Featured Projects</h3>
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <div class="section-header">
+                <h3 class="section-title">Featured Projects</h3>
+                <p class="section-subtitle">Real-World AI Solutions with Measurable Impact</p>
+            </div>
+
             <div class="projects-grid">
                 <!-- CareCloud Voice Agent -->
                 <div class="project-card project-featured">
-                    <div class="featured-badge">⭐ FEATURED</div>
-                    <div class="project-title">
-                        <i class="fas fa-microphone-alt"></i> Healthcare AI Voice Agent
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i> FEATURED
                     </div>
-                    <div class="project-description">
+                    <div class="project-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h4 class="project-title">Healthcare AI Voice Agent (CareCloud)</h4>
+                    <p class="project-description">
                         Production-ready conversational AI agent for patient registration and appointment booking. 
-                        Implements multi-turn dialogue with context awareness and intelligent scheduling using GPT-4o and Vapi voice interface.
-                    </div>
+                        Implements multi-turn dialogue management with context awareness, intelligent scheduling, and 
+                        seamless voice interface using GPT-4o and Vapi.
+                    </p>
                     <div class="project-tech">
                         <span class="tech-tag">GPT-4o</span>
-                        <span class="tech-tag">Vapi</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Voice AI</span>
+                        <span class="tech-tag">Vapi (Voice AI)</span>
+                        <span class="tech-tag">Node.js/Express</span>
+                        <span class="tech-tag">PostgreSQL (Neon)</span>
+                        <span class="tech-tag">Render</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/ImamaJawad/CareCloud_VoiceAgent" class="project-btn" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
+                    <a href="https://github.com/ImamaJawad/CareCloud_VoiceAgent" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
 
-                <!-- Autonomous Data Analysis Agent -->
+                <!-- GNN for Cybersecurity -->
                 <div class="project-card">
-                    <div class="project-title">
-                        <i class="fas fa-robot"></i> Autonomous Data Analysis Agent
+                    <div class="project-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <div class="project-description">
-                        LLM-powered agent using LangChain and LangGraph that autonomously analyzes datasets, executes SQL queries, 
-                        and generates insights with multi-step reasoning (ReAct pattern).
-                    </div>
+                    <h4 class="project-title">Graph Neural Networks for Network Intrusion Detection</h4>
+                    <p class="project-description">
+                        Optimized GNN architectures within Nvidia Morpheus pipeline for cybersecurity applications. 
+                        Achieved satisfactory accuracy using self-supervised Autoencoder approaches on CIC-2018 and UNSW datasets.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">LangGraph</span>
-                        <span class="tech-tag">ReAct</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">DuckDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/ImamaJawad/ResumeMatcher" class="project-btn" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- AI Resume-Job Matcher -->
-                <div class="project-card">
-                    <div class="project-title">
-                        <i class="fas fa-search"></i> AI Resume-Job Matcher (RAG System)
-                    </div>
-                    <div class="project-description">
-                        Embedding-based semantic matching using Sentence-Transformers and FAISS vector database. 
-                        Deployed on AWS SageMaker processing 10K+ resume-job pairs.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">RAG</span>
-                        <span class="tech-tag">FAISS</span>
-                        <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">AWS SageMaker</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/ImamaJawad/ResumeMatcher" class="project-btn" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Graph Neural Networks -->
-                <div class="project-card">
-                    <div class="project-title">
-                        <i class="fas fa-shield-alt"></i> GNN for Network Intrusion Detection
-                    </div>
-                    <div class="project-description">
-                        Optimized Graph Neural Network architectures within Nvidia Morpheus pipeline for cybersecurity. 
-                        Achieved satisfactory accuracy using self-supervised learning on CIC-2018 and UNSW datasets.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">GNNs</span>
+                        <span class="tech-tag">Graph Neural Networks</span>
                         <span class="tech-tag">PyTorch Geometric</span>
                         <span class="tech-tag">Nvidia Morpheus</span>
                         <span class="tech-tag">Cybersecurity</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/ImamaJawad" class="project-btn" target="_blank">
-                            <i class="fab fa-github"></i> View Research
-                        </a>
+                    <a href="https://github.com/ImamaJawad/GNN_IDS_PIPELINE" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- AI Resume-Job Matcher -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-search"></i>
                     </div>
+                    <h4 class="project-title">AI Resume-Job Matcher (RAG System)</h4>
+                    <p class="project-description">
+                        Semantic matching system using Sentence-Transformers and FAISS vector database. 
+                        Deployed inference endpoint on AWS SageMaker with RESTful API processing 10K+ resume-job pairs.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Sentence-Transformers</span>
+                        <span class="tech-tag">AWS SageMaker</span>
+                    </div>
+                    <a href="https://github.com/ImamaJawad/ResumeMatcher" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
 
                 <!-- NLP Story Classification -->
                 <div class="project-card">
-                    <div class="project-title">
-                        <i class="fas fa-language"></i> NLP Story Classification
+                    <div class="project-icon">
+                        <i class="fas fa-language"></i>
                     </div>
-                    <div class="project-description">
+                    <h4 class="project-title">NLP Story Classification with Fine-Tuned BERT</h4>
+                    <p class="project-description">
                         Fine-tuned BERT model for multi-class text classification achieving 92% F1-score and 89% accuracy 
-                        on 15K story dataset using Hugging Face Transformers.
-                    </div>
+                        on 15K story dataset using Hugging Face Transformers and custom data augmentation pipeline.
+                    </p>
                     <div class="project-tech">
                         <span class="tech-tag">BERT</span>
                         <span class="tech-tag">Hugging Face</span>
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">NLP</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/ImamaJawad/bert-story-classifier" class="project-btn" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
+                    <a href="https://github.com/ImamaJawad/bert-story-classifier" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
 
-                <!-- Production ML Systems -->
+                <!-- Cancer Immune Subtyping -->
                 <div class="project-card">
-                    <div class="project-title">
-                        <i class="fas fa-chart-line"></i> Production ML Systems ($900K+ Impact)
+                    <div class="project-icon">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
-                    <div class="project-description">
-                        Built and deployed ML models for customer-agent pairing optimization delivering $75K+ monthly revenue. 
-                        Implemented automated monitoring achieving 99.5% uptime for Fortune 500 clients.
-                    </div>
+                    <h4 class="project-title">AI-Driven Cancer Immune Subtyping</h4>
+                    <p class="project-description">
+                        Developed Random Forest and SVM ensemble achieving 84% accuracy for tumor microenvironment 
+                        classification on TCGA dataset (10K+ samples) for precision immunotherapy research.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Production ML</span>
-                        <span class="tech-tag">MLOps</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Bayesian ML</span>
+                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">SVM</span>
+                        <span class="tech-tag">Healthcare AI</span>
+                        <span class="tech-tag">Precision Medicine</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://www.linkedin.com/in/imamajawad/" class="project-btn" target="_blank">
-                            <i class="fas fa-briefcase"></i> Learn More
-                        </a>
+                    <a href="https://github.com/ImamaJawad/AI-DrivenPan-CancerImmuneSubtypingforPrecisionImmunotherapy" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Computer Vision -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
+                    <h4 class="project-title">Computer Vision Pipeline</h4>
+                    <p class="project-description">
+                        Implemented object detection (YOLO, Faster R-CNN) and GANs for image generation. 
+                        Built interactive visualization tools for model outputs using OpenCV and PyTorch.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">YOLO</span>
+                        <span class="tech-tag">Faster R-CNN</span>
+                        <span class="tech-tag">GANs</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
+                    <a href="https://github.com/ImamaJawad/ComputerVision" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Skills -->
-        <section class="section">
-            <h3>Technical Skills</h3>
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <div class="section-header">
+                <h3 class="section-title">Technical Skills</h3>
+                <p class="section-subtitle">Comprehensive AI/ML Technology Stack</p>
+            </div>
+
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4><i class="fas fa-brain"></i> Agentic AI & LLMs</h4>
+                    <div class="skill-header">
+                        <i class="fas fa-robot skill-icon"></i>
+                        <h4>Agentic AI & LLMs</h4>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">LangChain</span>
                         <span class="skill-tag">LangGraph</span>
                         <span class="skill-tag">LlamaIndex</span>
-                        <span class="skill-tag">OpenAI</span>
-                        <span class="skill-tag">Anthropic</span>
-                        <span class="skill-tag">Multi-Agent</span>
+                        <span class="skill-tag">OpenAI GPT-4</span>
+                        <span class="skill-tag">Anthropic Claude</span>
+                        <span class="skill-tag">Multi-Agent Systems</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h4><i class="fas fa-database"></i> RAG & Vector DBs</h4>
+                    <div class="skill-header">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h4>RAG & Vector Databases</h4>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">FAISS</span>
                         <span class="skill-tag">Pinecone</span>
                         <span class="skill-tag">Weaviate</span>
+                        <span class="skill-tag">Milvus</span>
                         <span class="skill-tag">Embeddings</span>
                         <span class="skill-tag">Semantic Search</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h4><i class="fas fa-microphone"></i> Voice AI & Speech</h4>
+                    <div class="skill-header">
+                        <i class="fas fa-microphone skill-icon"></i>
+                        <h4>Voice AI & Speech</h4>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">Vapi</span>
                         <span class="skill-tag">Whisper</span>
                         <span class="skill-tag">ElevenLabs</span>
+                        <span class="skill-tag">Google TTS</span>
                         <span class="skill-tag">STT/TTS</span>
                         <span class="skill-tag">Conversational AI</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h4><i class="fas fa-code"></i> ML & Deep Learning</h4>
+                    <div class="skill-header">
+                        <i class="fas fa-brain skill-icon"></i>
+                        <h4>ML & Deep Learning</h4>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">PyTorch</span>
                         <span class="skill-tag">TensorFlow</span>
                         <span class="skill-tag">Keras</span>
-                        <span class="skill-tag">GNNs</span>
-                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Graph Neural Networks</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h4><i class="fas fa-laptop-code"></i> Programming</h4>
+                    <div class="skill-header">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h4>Programming Languages</h4>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">Python (Expert)</span>
                         <span class="skill-tag">JavaScript/Node.js</span>
@@ -654,42 +921,145 @@
                         <span class="skill-tag">C++</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                    <div class="skill-header">
+                        <i class="fas fa-chart-bar skill-icon"></i>
+                        <h4>Data & Visualization</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud skill-icon"></i>
+                        <h4>Cloud & DevOps</h4>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">AWS</span>
                         <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">GCP</span>
                         <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
                         <span class="skill-tag">MLOps</span>
-                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server skill-icon"></i>
+                        <h4>Databases</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">BigQuery</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">DuckDB</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="cta-section">
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <div class="section-header">
+                <h3 class="section-title">Education</h3>
+                <p class="section-subtitle">Academic Excellence in AI & Software Engineering</p>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h4 class="education-degree">MSc in Artificial Intelligence</h4>
+                            <p class="education-school">Queen's University Belfast</p>
+                        </div>
+                        <span class="education-date">Sept 2024 - Sept 2025</span>
+                    </div>
+                    <div class="education-details">
+                        <p><strong>Modules:</strong> Machine Learning, Deep Learning, Knowledge Engineering, Computer Vision, 
+                        Natural Language Processing, AI for Health, Advanced Topics in AI</p>
+                        <p style="margin-top: 1rem;"><strong>Research:</strong> Graph Neural Networks for Network Intrusion Detection 
+                        using Nvidia Morpheus pipeline with self-supervised learning approaches</p>
+                    </div>
+                    <span class="education-badge">Graduated with Distinction</span>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h4 class="education-degree">Bachelor of Software Engineering</h4>
+                            <p class="education-school">National University of Sciences and Technology (NUST)</p>
+                        </div>
+                        <span class="education-date">Sept 2016 - July 2020</span>
+                    </div>
+                    <div class="education-details">
+                        <p><strong>Core Focus:</strong> Software Development, Data Structures & Algorithms, Database Systems, 
+                        Web Development, Mobile App Development, Software Design Patterns</p>
+                        <p style="margin-top: 1rem;"><strong>Final Year Project:</strong> RSSI-based Object Detection and 
+                        Localization Algorithm using Machine Learning for Android platforms</p>
+                    </div>
+                    <span class="education-badge">First-Class Honours - CGPA: 3.57/4.0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
             <h3>Let's Build the Future of AI Together</h3>
             <p>
                 I'm passionate about creating AI solutions that drive real business impact. 
                 Whether you're looking for an AI engineer to join your remote team or want to discuss 
                 exciting projects in agentic AI, LLMs, or production ML systems, I'd love to connect!
             </p>
-            <div class="cta-buttons">
-                <a href="mailto:imama.muhammad@gmail.com" class="btn">
+
+            <div class="contact-grid">
+                <div class="contact-item-card">
                     <i class="fas fa-envelope"></i>
-                    Get In Touch
+                    <p><a href="mailto:imama.muhammad@gmail.com">imama.muhammad@gmail.com</a></p>
+                </div>
+                <div class="contact-item-card">
+                    <i class="fab fa-linkedin"></i>
+                    <p><a href="https://www.linkedin.com/in/imamajawad/" target="_blank">linkedin.com/in/imamajawad</a></p>
+                </div>
+                <div class="contact-item-card">
+                    <i class="fab fa-github"></i>
+                    <p><a href="https://github.com/ImamaJawad" target="_blank">github.com/ImamaJawad</a></p>
+                </div>
+                <div class="contact-item-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Open to Remote Work Globally</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="mailto:imama.muhammad@gmail.com" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
                 </a>
-                <a href="https://www.linkedin.com/in/imamajawad/" class="btn" target="_blank">
+                <a href="https://www.linkedin.com/in/imamajawad/" class="btn btn-secondary" target="_blank">
                     <i class="fab fa-linkedin"></i>
                     Connect on LinkedIn
                 </a>
-                <a href="https://github.com/ImamaJawad" class="btn" target="_blank">
+                <a href="https://github.com/ImamaJawad" class="btn btn-secondary" target="_blank">
                     <i class="fab fa-github"></i>
-                    View GitHub
+                    View GitHub Profile
                 </a>
             </div>
         </section>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Imama Jawad. Built with ❤️ for AI Innovation.</p>
+    </footer>
 </body>
 </html>
