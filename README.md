@@ -27,22 +27,18 @@ Production-ready conversational AI for patient registration and appointment book
 - **Tech:** GPT-4o, Vapi (STT/TTS), Node.js, PostgreSQL (Neon), Render
 - **Features:** Multi-turn dialogue, context awareness, real-time scheduling
 
-### 2. [Autonomous Data Analysis Agent](https://github.com/ImamaJawad/ResumeMatcher)
-LLM-powered agent for automated data analysis using LangChain and LangGraph
-- **Tech:** LangChain, LangGraph, ReAct Pattern, FastAPI, DuckDB
-- **Features:** Multi-step reasoning, tool integration, SQL execution
 
-### 3. [AI Resume-Job Matcher (RAG System)](https://github.com/ImamaJawad/ResumeMatcher)
+### 2. [AI Resume-Job Matcher (RAG System)](https://github.com/ImamaJawad/ResumeMatcher)
 Semantic matching system using vector databases
 - **Tech:** Sentence-Transformers, FAISS, AWS SageMaker
 - **Scale:** 10K+ resume-job pairs processed
 
-### 4. [Graph Neural Networks for Cybersecurity](https://github.com/ImamaJawad)
+### 3. [Graph Neural Networks for Cybersecurity]([https://github.com/ImamaJawad](https://github.com/ImamaJawad/GNN_IDS_PIPELINE))
 Network intrusion detection using GNNs in Nvidia Morpheus pipeline
 - **Tech:** PyTorch Geometric, GNNs, Nvidia Morpheus
 - **Datasets:** CIC-2018, UNSW
 
-### 5. [NLP Story Classification](https://github.com/ImamaJawad/bert-story-classifier)
+### 4. [NLP Story Classification](https://github.com/ImamaJawad/bert-story-classifier)
 Fine-tuned BERT for multi-class text classification
 - **Performance:** 92% F1-score, 89% accuracy
 - **Dataset:** 15K stories
