@@ -208,56 +208,6 @@ A/B Testing • Bayesian Statistics • Production ML Deployment
 
 ---
 
-## 📈 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ImamaJawad&show_icons=true&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ImamaJawad&layout=compact&theme=radical)
-
-</div>
-
----
-
-## 💡 What I Bring
-
-```python
-class ImamaJawad:
-    def __init__(self):
-        self.role = "Senior AI Engineer"
-        self.experience_years = 5
-        self.revenue_impact = "$900K+ annually"
-        
-        self.specialties = [
-            "Agentic AI & Multi-Agent Systems",
-            "LLM-Powered Applications",
-            "Voice AI & Conversational Systems",
-            "RAG Architectures",
-            "Production MLOps (99.5% uptime)",
-            "Graph Neural Networks",
-            "Team Leadership & Mentorship"
-        ]
-        
-        self.tech_stack = {
-            "agentic_ai": ["LangChain", "LangGraph", "LlamaIndex"],
-            "llms": ["GPT-4", "Claude", "Open-Source LLMs"],
-            "voice_ai": ["Vapi", "Whisper", "ElevenLabs"],
-            "ml_frameworks": ["PyTorch", "TensorFlow", "scikit-learn"],
-            "cloud": ["AWS", "Azure", "GCP"],
-            "languages": ["Python", "JavaScript/Node.js", "SQL", "R"]
-        }
-        
-    def build_production_ai(self):
-        return {
-            "quality": "Enterprise-grade",
-            "uptime": "99.5%",
-            "impact": "Measurable revenue",
-            "scalability": "Fortune 500 ready"
-        }
-```
-
----
 
 ## 🌟 Why Work With Me?
 
